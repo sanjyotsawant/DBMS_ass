@@ -1,0 +1,14 @@
+
+
+1. Which field of the Customer table is the primary key?
+Ans. CNUM of the Customer table is the primary key. Because it is unique identifier of the Customer table.
+
+2. What is the 4th column of the Customers table? 
+Ans. Rating is the 4th column of the Customer table.
+
+3. What is another word for row?  For column? 
+Ans. Another words for ros are Tuple,Entity & opportunity.
+     Another words for column are Attributes,Method.
+
+4. Why isn’t it possible to see the first five rows of a table? 
+Ans. In MySQL, there is no perticular order in which SQL stores the row. They are scattered all over the DB server HD. so it is not possible to see the 1st five rows of the table.
