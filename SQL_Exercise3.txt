@@ -1,6 +1,6 @@
 
 1. Display all the Supplier names with the initial letter capital. 
-Ans. select contact(upper(substr(sname,1,1)),lower(substr(sname,2))) as sname from s;						
+Ans. select concat(upper(substr(sname,1,1)),lower(substr(sname,2))) as sname from s;						
 
 2. Display all the Supplier names in upper case. 
 Ans. select upper(sname) as SNAME from s;				
@@ -24,7 +24,16 @@ Ans. select sname,length(sname) from s;
 Ans. select * from s where soundex(sname)=soundex('RM');
 
 9.  Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.). 
-Ans. 
+Ans. select case 
+	when status=10 then 'Ten'
+	when status=20 then 'Twenty'
+	when status=30 then 'Thirty'
+	else 'others'
+	end
+	as status
+	from s;	
 
 10. Display the current day (e.g. Thursday).   
-Ans.  SELECT DAYNAME(CURDATE());
+Ans.  select dayname(sysdate()) as DAY;
+       SELECT DAYNAME(CURDATE());
+      
