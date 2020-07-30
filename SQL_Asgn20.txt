@@ -32,4 +32,22 @@ Ans.  create view commissions
 	grant insert, update on commissions to user_name;
 
 3.  Some SQL implementations have a built-in constant representing the current date, sometimes called “CURDATE” or “SYSDATE”.  The word SYSDATE can therefore be used in a SQL statement, and be replaced by the current date when the value is accessed by commands such as Select or Insert. We will use a view of the Orders table called Entryorders to insert rows into the Orders table. Create the Orders table, so that SYSDATE is automatically inserted for odate if no value is given. Then create the Entryorders view so that no values can be given.  
-Ans.   
+Ans. 
+
+create table orders1 
+(
+		Onum int(4), 
+		Amt float(7,2), 
+		Odate date default current_timestamp, 
+       		cnum int(4), 
+      		snum int (4)
+);
+	
+	
+Insert into Orders1 (Onum, Amt, Cnum, Snum) values
+( 1001, 1927.23,2001,3001);
+
+	
+create view Entryorders
+  as 
+select * from orders1;  
